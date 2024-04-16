@@ -74,10 +74,10 @@ match palletDirection.casefold():
             if width - ((palletWideNumber / 2) * (PALLET_LENGTH_PAD + PALLET_LENGTH + AISLE_GAP + PALLET_LENGTH)) > (PALLET_LENGTH_PAD + PALLET_LENGTH): palletWideNumber += 1
 
         #Calculate pallets per area length
-        if top.casefold() == 'y' and top.casefold() == 'y':
+        if top.casefold() == 'y' and bottom.casefold() == 'y':
             palletLongNumber = length // (PALLET_WIDTH + PALLET_WIDTH_PAD)
             if length - (palletLongNumber * (PALLET_WIDTH_PAD + PALLET_WIDTH)) > PALLET_WIDTH: palletLongNumber += 1 
-        elif top.casefold() == 'y' or top.casefold() == 'y':
+        elif top.casefold() == 'y' or bottom.casefold() == 'y':
             palletLongNumber = length // (PALLET_WIDTH + PALLET_WIDTH_PAD)
             if length - (palletLongNumber * (PALLET_WIDTH_PAD + PALLET_WIDTH)) < PALLET_WIDTH_PAD: palletLongNumber -= 1       
         else:
